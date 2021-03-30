@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/scoreList">
+
+    <fragment
+        android:id="@+id/difficultyChooser"
+        android:name="hera.com.clickergame.ui.difficulty.DifficultyChooser"
+        android:label="fragment_difficulty_chooser"
+        tools:layout="@layout/fragment_difficulty_chooser" >
+        <action
+            android:id="@+id/action_difficultyChooser_to_game"
+            app:destination="@id/game"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/game"
+        android:name="hera.com.clickergame.ui.game.Game"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="difficulty"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreList"
+        android:name="hera.com.clickergame.ui.score.ScoreList"
+        android:label="fragment_score_list"
+        tools:layout="@layout/fragment_score_list" />
+    <action
+        android:id="@+id/action_global_difficultyChooser"
+        app:destination="@id/difficultyChooser"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out"
+        app:popUpTo="@id/difficultyChooser"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_scoreList"
+        app:destination="@id/scoreList"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out"
+        app:popUpTo="@id/scoreList"
+        app:popUpToInclusive="true" />
+</navigation>

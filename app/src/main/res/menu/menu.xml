@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/difficulty"
+        android:icon="@drawable/baseline_sports_esports_white_18dp"
+        android:title="@string/difficulty_icon_title"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/score"
+        android:title="@string/score_icon_title"
+        android:icon="@drawable/baseline_leaderboard_white_18dp"
+        app:showAsAction="ifRoom"/>
+
+</menu>

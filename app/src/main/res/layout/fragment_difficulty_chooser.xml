@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.difficulty.DifficultyChooser">
+
+    <TextView
+        android:id="@+id/easy_mode"
+        style="@style/DifficultyBlockStyle"
+        android:background="@color/pink_100"
+        android:text="@string/easy_mode_text"
+        app:layout_constraintBottom_toTopOf="@+id/medium_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/medium_mode"
+        style="@style/DifficultyBlockStyle"
+        android:layout_height="wrap_content"
+        android:background="@color/pink_600"
+        android:text="@string/medium_mode_text"
+        app:layout_constraintBottom_toTopOf="@+id/hard_mode"
+        app:layout_constraintEnd_toEndOf="@+id/easy_mode"
+        app:layout_constraintStart_toStartOf="@+id/easy_mode"
+        app:layout_constraintTop_toBottomOf="@+id/easy_mode" />
+
+    <TextView
+        android:id="@+id/hard_mode"
+        style="@style/DifficultyBlockStyle"
+        android:layout_height="wrap_content"
+        android:background="@color/pink_900"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/hard_mode_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/medium_mode"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/medium_mode"
+        app:layout_constraintTop_toBottomOf="@+id/medium_mode" />
+</androidx.constraintlayout.widget.ConstraintLayout>
